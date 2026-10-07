@@ -9,7 +9,7 @@ Answer:
 
 2. List all resources you have read or looked at this week, along with the time you spent on each one (to the nearest 1/2 hour is enough). For web pages, blog posts, videos etc, provide links and titles. For papers, provide links and citations. For code written, provide a Jupyter notebook in the Week_n folder and list the file name (as a link) here. For AI tools, provide a transcript of your session in a separate file in the Week_n folder, and list the file name (as a link) here. The transcript file can be a text file or pdf. Do *not* link to chat sessions directly. 
 
-Answer:
+Answer: I first read my assigned paper for 3 hours in the Kelvin Smith library; Understanding Black-box Predictions via Influence Functions and then I met my classmate in CSDS 440 who is a Computer science major in order to discuss a few things I did not understand (30 minutes).I then read another paper on influence functions in order to better understand them; https://www.jmlr.org/papers/volume9/debruyne08a/debruyne08a.pdf. Thereafter, I used CHATGPT to answer a few questions on concepts that I did not understand.
 
 3. Summarize what you have learned **this week** from the resources above. Be clear, detailed and precise. It is ok to be uncertain about the content. Do **not** copy/paste content from any resource.
 
