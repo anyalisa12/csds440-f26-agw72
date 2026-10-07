@@ -13,7 +13,7 @@ Answer: I first read my assigned paper for 3 hours in the Kelvin Smith library; 
 
 3. Summarize what you have learned **this week** from the resources above. Be clear, detailed and precise. It is ok to be uncertain about the content. Do **not** copy/paste content from any resource.
 
-From the paper understanding Blackbox predictions via Influence functions, I learned how influence functions work and how they find the specific training points which cause a specific prediction.  
+From the paper understanding Blackbox predictions via Influence functions, I learned how influence functions work and how they find the specific training points which cause a specific prediction. Influence functions can work even when some  assumptions are not met as evidenced by the fact that in this paper they were able to work for convex functions even when there wasn't convergence. I also learned about Hessian Vectors and how when they are inverted, they can be challenging to apply in CNNs
 
 
 4. Describe any new ideas you may have had as you were studying the resources, and if you did any follow ups to investigate these ideas.
