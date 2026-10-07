@@ -18,7 +18,7 @@ From the paper understanding Blackbox predictions via Influence functions, I lea
 
 4. Describe any new ideas you may have had as you were studying the resources, and if you did any follow ups to investigate these ideas.
 
-Answer: 
+Answer: The counterfactual concept in influence functions, they work backwards in a way that they try to imagine the scenario when a certain point isn't there. They answer the question of how the removal of this point would affect the prediction made. From my second reading https://www.jmlr.org/papers/volume9/debruyne08a/debruyne08a.pdf ;I learned how influence functions can be used to understand the effects of outliers on an estimator. I followed up on this investigation through a chat with CHATGPT cited in my resources and I was able to conclude that influence functions are rarely used for outlier estimators but rather with data that is within range in order to understand how removal of specific points can affect the model directly.
 
 5. If you implemented/ran any code or algorithms from the resources or while investigating any new ideas, describe what you did. Link to a jupyter notebook in your Week_n folder showing the runs. You may also include python files containing code in your Week_n folder. If so, their content should be described here. If you forked another repo or imported pre-built code, please provide a link. If an AI tool wrote part of the code, please provide a session transcript in the Week_n folder and link to it here. If any part of the code did not run or did not behave as expected, describe your best guess why and possible fixes.
 
