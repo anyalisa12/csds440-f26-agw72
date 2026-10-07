@@ -12,6 +12,7 @@ Answer:
 Answer: I first read my assigned paper for 3 hours in the Kelvin Smith library; Understanding Black-box Predictions via Influence Functions and then I met my classmate in CSDS 440 who is a Computer science major in order to discuss a few things I did not understand (30 minutes).I then read another paper on influence functions in order to better understand them; https://www.jmlr.org/papers/volume9/debruyne08a/debruyne08a.pdf. Thereafter, I used CHATGPT to answer a few questions on concepts that I did not understand.
 
 3. Summarize what you have learned **this week** from the resources above. Be clear, detailed and precise. It is ok to be uncertain about the content. Do **not** copy/paste content from any resource.
+From the paper understanding Blackbox predictions via Influence functions, I learned how influence functions work and how they find the specific training points which cause a specific prediction.  
 
 Answer: "From paper X, I learned about...I read blog post Y to clarify... but video Z said that...This made me even more confused. I wrote some code to simulate what I learned but it did not work. AI tool G said...My current understanding is..."
 
@@ -25,8 +26,8 @@ Answer:
 
 6. Summarize any specific points of confusion, uncertainty or difficulty from your reading or implementation that arose from your readings or implementations this week. This can partly overlap with your answer (3).
 
-Answer:
+Answer: I am confused about how finding the points in influence function from training data can directly translate to better predictions for our testing data. 
 
 7. List specific goals you would like to accomplish for next week and action items aligned with these goals based on your answers above. Be as specific as you can.
 
-Answer: 
+Answer: I plan on working on code with a very simple 1D CNN to first code an influence function and i will use kernels based regression to see how this can influence the model being trained. And after I understand how influence functions operate then I will read more about black box predictions.
