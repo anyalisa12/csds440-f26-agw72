@@ -5,7 +5,7 @@ Answer all questions. For those which do not apply write "Not Applicable." Place
 
 1. Briefly summarize your knowledge of the area you are researching as of last week, and your plans for the current week from Q7 of your last diary. If this is the first diary write "Not Applicable."
 
-Answer:
+Answer: Influence functions are counter intuitive in that they work backwards to find specific points that affect the predictions that can be made by a model. They are able to achieve this by testing when a specific point is removed, what type of impact this will have on a model's predictions. Additionally because I was interested in the Hessian vector inversion that was spoken about in the paper, I decided for week 7, I'd write a 1D CNN model and there after implement an influence function before applying my understanding to black box predictions.
 
 2. List all resources you have read or looked at this week, along with the time you spent on each one (to the nearest 1/2 hour is enough). For web pages, blog posts, videos etc, provide links and titles. For papers, provide links and citations. For code written, provide a Jupyter notebook in the Week_n folder and list the file name (as a link) here. For AI tools, provide a transcript of your session in a separate file in the Week_n folder, and list the file name (as a link) here. The transcript file can be a text file or pdf. Do *not* link to chat sessions directly. 
 
@@ -13,7 +13,7 @@ Answer: I first read my assigned paper for 3 hours in the Kelvin Smith library; 
 
 3. Summarize what you have learned **this week** from the resources above. Be clear, detailed and precise. It is ok to be uncertain about the content. Do **not** copy/paste content from any resource.
 
-From the paper understanding Blackbox predictions via Influence functions, I learned how influence functions work and how they find the specific training points which cause a specific prediction. Influence functions can work even when some  assumptions are not met as evidenced by the fact that in this paper they were able to work for convex functions even when there wasn't convergence. I also learned about Hessian Vectors and how when they are inverted, they can be challenging to apply in CNNs
+Answer : From the paper understanding Blackbox predictions via Influence functions, I learned how influence functions work and how they find the specific training points which cause a specific prediction. Influence functions can work even when some  assumptions are not met as evidenced by the fact that in this paper they were able to work for convex functions even when there wasn't convergence. I also learned about Hessian Vectors and how when they are inverted, they can be challenging to apply in CNNs
 
 
 4. Describe any new ideas you may have had as you were studying the resources, and if you did any follow ups to investigate these ideas.
