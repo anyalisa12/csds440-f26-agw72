@@ -26,7 +26,7 @@ Answer: Not Applicable because it was my first week of reading and I will implem
 
 6. Summarize any specific points of confusion, uncertainty or difficulty from your reading or implementation that arose from your readings or implementations this week. This can partly overlap with your answer (3).
 
-Answer: I am confused about how finding the points in influence function from training data can directly translate to better predictions for our testing data. 
+Answer: I am confused about how finding the points in influence function from training data can directly translate to better predictions for our testing data. And since for adversarial network models, they place less importance to having a small number of points, doesn't this affect the models performance? Since we need more points to have a better performing model and a more secure model in the real world application of ML models 
 
 7. List specific goals you would like to accomplish for next week and action items aligned with these goals based on your answers above. Be as specific as you can.
 
