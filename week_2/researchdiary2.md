@@ -19,7 +19,7 @@ name (as a link) here. For AI tools, provide a transcript of your session in a
 separate file in the Week_n folder, and list the file name (as a link) here. The
 transcript file can be a text file or pdf. Do *not* link to chat sessions directly.
 
-Answer: I spent 2 hours reading the paper " Interpreting the decisions of CNNs via influence functions" and I also read one more paper for 1.5 hours, this paper was about how CNNs were used in fault diagnosis which is a bit tangent to my blackbox predictions bust because the focus of my paper is on prediction influence, I found the paper "  " very helpful because it showed how a 1D CNN was used to improve the predictions of fault analysis for a bearing problem where they used the CWRU bearing data set which is a public data set. 
+Answer: I spent 2 hours reading the paper " Interpreting the decisions of CNNs via influence functions" and I also read one more paper for 1.5 hours, this paper was about how CNNs were used in fault diagnosis which is a bit tangent to my blackbox predictions bust because the focus of my paper is on prediction influence, I found the paper "  " very helpful because it showed how a 1D CNN was used to improve the predictions of fault analysis for a bearing problem where they used the CWRU bearing data set which is a public data set. And then another set of 2 hours on a separate date writing a simple python program incoporating an influence function in a 1D CNN 
 
 4. Summarize what you have learned **this week** from the resources above. Be
 clear, detailed and precise. It is ok to be uncertain about the content. Do **not**
