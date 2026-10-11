@@ -29,9 +29,10 @@ Answer: From the paper " Interpreting the decisions of CNNs via influence functi
 
 4. Describe any new ideas you may have had as you were studying the resources, and
 if you did any follow ups to investigate these ideas.
-Answer:
+Answer: Influence functions have mostly been used in statistics but when thinking of deep learning applications, these functions follow a similar path and can offer useful information by explicitly finding how a change in a singular point affects the estimator and maps the prediction. When working with a CNN for my code I used the CWRU bearing data and influence functions basically helped me classifiy if the faults in the bearing were overload of bearing or unlubricated causes and it was able to use the signals from th training examples to find which had a bigger effect on a particular classification.
 
-5. If you implemented/ran any code or algorithms from the resources or while
+
+6. If you implemented/ran any code or algorithms from the resources or while
 investigating any new ideas, describe what you did. Link to a jupyter notebook in
 your Week_n folder showing the runs. You may also include python files containing
 code in your Week_n folder. If so, their content should be described here. If you
@@ -40,11 +41,11 @@ tool wrote part of the code, please provide a session transcript in the Week_n
 folder and link to it here. If any part of the code did not run or did not behave
 as expected, describe your best guess why and possible fixes.
 Answer:
-6. Summarize any specific points of confusion, uncertainty or difficulty from your
+7. Summarize any specific points of confusion, uncertainty or difficulty from your
 reading or implementation that arose from your readings or implementations this
 week. This can partly overlap with your answer (3).
 Answer:
-7. List specific goals you would like to accomplish for next week and action items
+8. List specific goals you would like to accomplish for next week and action items
 aligned with these goals based on your answers above. Be as specific as you can.
 Answer:
 
