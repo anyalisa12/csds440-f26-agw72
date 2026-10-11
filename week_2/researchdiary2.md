@@ -19,18 +19,19 @@ name (as a link) here. For AI tools, provide a transcript of your session in a
 separate file in the Week_n folder, and list the file name (as a link) here. The
 transcript file can be a text file or pdf. Do *not* link to chat sessions directly.
 
-Answer: I spent 2 hours reading the paper " Interpreting the decisions of CNNs via influence functions" and I also read one more paper for 1.5 hours, this paper was about how CNNs were used in fault diagnosis which is a bit tangent to my blackbox predictions bust because the focus of my paper is on prediction influence, I found the paper "  " very helpful because it showed how a 1D CNN was used to improve the predictions of fault analysis for a bearing problem where they used the CWRU bearing data set which is a public data set. And then another set of 2 hours on a separate date writing a simple python program incoporating an influence function in a 1D CNN 
+Answer: I spent 2 hours reading the paper " Interpreting the decisions of CNNs via influence functions" and I also read one more paper for 1.5 hours, this paper was about how CNNs were used in fault diagnosis which is a bit tangent to my blackbox predictions bust because the focus of my paper is on prediction influence, I found the paper " Federated Learning for Privacy-Preserving
+Collaboration " very helpful because it showed how a 1D CNN was used to improve the predictions of fault analysis for a bearing problem where they used the CWRU bearing data set which is a public data set. And then another set of 2 hours on a separate date writing a simple python program incoporating an influence function in a 1D CNN 
 
-4. Summarize what you have learned **this week** from the resources above. Be
+3. Summarize what you have learned **this week** from the resources above. Be
 clear, detailed and precise. It is ok to be uncertain about the content. Do **not**
 copy/paste content from any resource.
-Answer: "From paper X, I learned about...I read blog post Y to clarify... but video
-Z said that...This made me even more confused. I wrote some code to simulate what I
-learned but it did not work. AI tool G said...My current understanding is..."
-5. Describe any new ideas you may have had as you were studying the resources, and
+Answer: From the paper " Interpreting the decisions of CNNs via influence functions", I learned that deep learning models when performing class prediction they have to have loss functions and in this specific paper influence  scores were obtained for different images for the class prediction in this CNN. So influence scores were used to find how much one client's training set affected the model's prediction for a specific image.
+
+4. Describe any new ideas you may have had as you were studying the resources, and
 if you did any follow ups to investigate these ideas.
 Answer:
-6. If you implemented/ran any code or algorithms from the resources or while
+
+5. If you implemented/ran any code or algorithms from the resources or while
 investigating any new ideas, describe what you did. Link to a jupyter notebook in
 your Week_n folder showing the runs. You may also include python files containing
 code in your Week_n folder. If so, their content should be described here. If you
@@ -39,11 +40,11 @@ tool wrote part of the code, please provide a session transcript in the Week_n
 folder and link to it here. If any part of the code did not run or did not behave
 as expected, describe your best guess why and possible fixes.
 Answer:
-7. Summarize any specific points of confusion, uncertainty or difficulty from your
+6. Summarize any specific points of confusion, uncertainty or difficulty from your
 reading or implementation that arose from your readings or implementations this
 week. This can partly overlap with your answer (3).
 Answer:
-8. List specific goals you would like to accomplish for next week and action items
+7. List specific goals you would like to accomplish for next week and action items
 aligned with these goals based on your answers above. Be as specific as you can.
 Answer:
 
