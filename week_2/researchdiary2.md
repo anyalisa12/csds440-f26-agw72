@@ -5,10 +5,12 @@ the completed diary and all other resources indicated below in a folder "Week_n"
 your cwru-courses repository, where n is 1 to 5. I expect the diary to show clearly
 that you have spent at least 6 hours on this work (including the time spent
 preparing this diary).
+
 1. Briefly summarize your knowledge of the area you are researching as of last
 week, and your plans for the current week from Q7 of your last diary. If this is
 the first diary write "Not Applicable."
-Answer:
+Answer: This week I worked with influence functions on a 1D CNN which is a main part of my project. 1D CNNs are an easy approach to understanding this concept especially that they process sequential data and instead of 2d image filters which I think are more complex. ID CNNs have kernels which are filters sliding along one axis and this way I can easily apply an influence function. 
+
 2. List all resources you have read or looked at this week, along with the time you
 spent on each one (to the nearest 1/2 hour is enough). For web pages, blog posts,
 videos etc, provide links and titles. For papers, provide links and citations. For
@@ -16,17 +18,19 @@ code written, provide a Jupyter notebook in the Week_n folder and list the file
 name (as a link) here. For AI tools, provide a transcript of your session in a
 separate file in the Week_n folder, and list the file name (as a link) here. The
 transcript file can be a text file or pdf. Do *not* link to chat sessions directly.
-Answer:
-3. Summarize what you have learned **this week** from the resources above. Be
+
+Answer: I spent 2 hours reading the paper " Interpreting the decisions of CNNs via influence functions" and I also read one more paper for 1.5 hours, this paper was about how CNNs were used in fault diagnosis which is a bit tangent to my blackbox predictions bust because the focus of my paper is on prediction influence, I found the paper "  " very helpful because it showed how a 1D CNN was used to improve the predictions of fault analysis for a bearing problem where they used the CWRU bearing data set which is a public data set. 
+
+4. Summarize what you have learned **this week** from the resources above. Be
 clear, detailed and precise. It is ok to be uncertain about the content. Do **not**
 copy/paste content from any resource.
 Answer: "From paper X, I learned about...I read blog post Y to clarify... but video
 Z said that...This made me even more confused. I wrote some code to simulate what I
 learned but it did not work. AI tool G said...My current understanding is..."
-4. Describe any new ideas you may have had as you were studying the resources, and
+5. Describe any new ideas you may have had as you were studying the resources, and
 if you did any follow ups to investigate these ideas.
 Answer:
-5. If you implemented/ran any code or algorithms from the resources or while
+6. If you implemented/ran any code or algorithms from the resources or while
 investigating any new ideas, describe what you did. Link to a jupyter notebook in
 your Week_n folder showing the runs. You may also include python files containing
 code in your Week_n folder. If so, their content should be described here. If you
@@ -35,11 +39,11 @@ tool wrote part of the code, please provide a session transcript in the Week_n
 folder and link to it here. If any part of the code did not run or did not behave
 as expected, describe your best guess why and possible fixes.
 Answer:
-6. Summarize any specific points of confusion, uncertainty or difficulty from your
+7. Summarize any specific points of confusion, uncertainty or difficulty from your
 reading or implementation that arose from your readings or implementations this
 week. This can partly overlap with your answer (3).
 Answer:
-7. List specific goals you would like to accomplish for next week and action items
+8. List specific goals you would like to accomplish for next week and action items
 aligned with these goals based on your answers above. Be as specific as you can.
 Answer:
 
