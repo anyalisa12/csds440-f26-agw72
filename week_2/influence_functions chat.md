@@ -1,4 +1,4 @@
-https://chatgpt.com/c/6ac5bbfc-94c0-83e9-bd1e-8506ca164e4c
+
 An influence function is a concept from statistics that measures how much an estimator changes when a single observation is slightly perturbed or added to the data. It is a fundamental tool in robust statistics and also appears in modern machine learning.
 Intuition
 Imagine you've calculated the average height of 1,000 people. Now you add one extra person who is 8 feet tall. The average changes slightly.
