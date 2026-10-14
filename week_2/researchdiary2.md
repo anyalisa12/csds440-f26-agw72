@@ -32,7 +32,7 @@ if you did any follow ups to investigate these ideas.
 Answer: Influence functions have mostly been used in statistics but when thinking of deep learning applications, these functions follow a similar path and can offer useful information by explicitly finding how a change in a singular point affects the estimator and maps the prediction. When working with a CNN for my code I used the CWRU bearing data and influence functions basically helped me classifiy if the faults in the bearing were overload of bearing or unlubricated causes and it was able to use the signals from th training examples to find which had a bigger effect on a particular classification.
 
 
-6. If you implemented/ran any code or algorithms from the resources or while
+5. If you implemented/ran any code or algorithms from the resources or while
 investigating any new ideas, describe what you did. Link to a jupyter notebook in
 your Week_n folder showing the runs. You may also include python files containing
 code in your Week_n folder. If so, their content should be described here. If you
@@ -40,50 +40,14 @@ forked another repo or imported pre-built code, please provide a link. If an AI
 tool wrote part of the code, please provide a session transcript in the Week_n
 folder and link to it here. If any part of the code did not run or did not behave
 as expected, describe your best guess why and possible fixes.
-Answer:  import numpy as np
-import torch
-import torch.nn as nn
-from torch.utils.data import DataLoader, TensorDataset
+Answer: Yes, I did set up code and I am still working on my 1D CNN model that has an influence function.
 
-# 1. Set up PyTorch
-torch.manual_seed(7)
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-# Expected inputs:
-# X_train: (number_of_samples, signal_length)
-# y_train: (number_of_samples,) with labels 0 or 1
-# X_test:  (number_of_test_samples, signal_length)
-# y_test:  (number_of_test_samples,) with labels 0 or 1
-#
-# Label 0 = overloaded bearing
-# Label 1 = unlubricated bearing
-# Verify these labels against your actual dataset.
-
-# Convert NumPy arrays to PyTorch tensors
-X_train = torch.tensor(X_train, dtype=torch.float32).unsqueeze(1)
-y_train = torch.tensor(y_train, dtype=torch.long)
-
-X_test = torch.tensor(X_test, dtype=torch.float32).unsqueeze(1)
-y_test = torch.tensor(y_test, dtype=torch.long)
-
-train_data = TensorDataset(X_train, y_train)
-train_loader = DataLoader(train_data, batch_size=16, shuffle=True)
-
-# 2. Define the 1D CNN
-class BearingCNN(nn.Module):
-    def __init__(self):
-        super().__init__()
-
-        self.conv1 = nn.Conv1d(1, 16, kernel_size=7, padding=3)
-        self.conv2 = nn.Conv1d(16, 32, kernel_size=5, padding=2)
-        self.relu = nn.ReLU()
-        self.pool = nn.AdaptiveAvgPool1d(1)
-        self.fc = nn.Linear(32, 2)
-7. Summarize any specific points of confusion, uncertainty or difficulty from your
+6. Summarize any specific points of confusion, uncertainty or difficulty from your
 reading or implementation that arose from your readings or implementations this
 week. This can partly overlap with your answer (3).
-Answer:
-8. List specific goals you would like to accomplish for next week and action items
+Answer: if I am going to use kernels in my CNN , I am still trying to understand if the influence function will affect my kernels and also if I should split my data in 80% for training and 20% for testing
+
+7. List specific goals you would like to accomplish for next week and action items
 aligned with these goals based on your answers above. Be as specific as you can.
-Answer:
+Answer: Continue working on my code and I will be reading about black box predictions next which is the first half of my research topic. I will also find which attributed I would like to be predicted and access my data for those attributes to make sure they are available in the CWRU bearing data set.
 
