@@ -1,8 +1,8 @@
-#chapter 2 
-#cifar data set 
-#chapter 2 
+#chapter 2
+#cifar data set
+#chapter 2
 
-#import the libraries 
+#import the libraries
 import numpy as np
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.datasets import cifar10
@@ -17,14 +17,14 @@ print("y_train:", y_train.shape)
 print("y_test: ", y_test.shape)
 print("First 10 labels:", y_train[:10].flatten())
 
-#normalise the image pixels with integers from 0 to 255 
+#normalise the image pixels with integers from 0 to 255
 print("inital step before normalising:", x_train.dtype, x_train.min(), x_train.max())
 x_train = x_train.astype("float32") / 255
 x_test = x_test.astype("float32") / 255
 print("After normalization: ", x_train.dtype, x_train.min(), x_train.max())
 print("Example green pixel value, image 54, row 12, column 13:", x_train[54, 12, 13, 1])
 
-#encode labels with a 10 element vector 
+#encode labels with a 10 element vector
 initial_labels = int (y_train[0,0])
 
 y_train = to_categorical(y_train, NUM_CLASSES)
@@ -41,12 +41,12 @@ print("test set", x_test.shape)
 print("train set labels", y_train.shape)
 print("testing labels", y_test.shape)
 
- if len(x_train)==50000:
+if len(x_train)==50000:
     print("Training dataset size is correct")
 else:
     print("Training dataset size is incorrect")
 
-if len(x_tes) == 10000:
+if len(x_test) == 10000:
     print("Testig dataset size is correct")
 else:
     print("Testing dataset size is incorrect")
@@ -54,7 +54,7 @@ else:
 if y_train.shape[1] == 10:
     print("Training labels are one-hot encoded")
 else:
-    print("Training labels are not one-hot encoded") 
+    print("Training labels are not one-hot encoded")
 
     if y_test.shape[1] == 10:
         print("Testing labels are one-hot encoded")
@@ -63,7 +63,7 @@ else:
 
 assert np.all((y_train == 0) | (y_train == 1))
 assert np.all((y_test == 0) | (y_test == 1))
-print("All preprocessing checks passed!") 
+print("All preprocessing checks passed!")
 
 #printing out the images
 
@@ -75,17 +75,4 @@ for i, ax in enumerate(axes.flat):
     ax.set_title(class_names[np.argmax(y_train[i])])
     ax.axis("off")
 plt.tight_layout()
-plt.show() 
-
-
-
-
-
-
-
-
-
-
-
-
-
+plt.show()
