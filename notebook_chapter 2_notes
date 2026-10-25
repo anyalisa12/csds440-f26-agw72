@@ -1,0 +1,187 @@
+#chapter 2 
+#using textbook examples to learn
+
+import numpy as np
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.datasets import cifar10
+
+#i removed the footnote 1
+(x_train, y_train), (x_test, y_test) = cifar10.load_data()
+
+NUM_CLASSES = 10
+
+#add original data before preprocessing
+print("Original shapes:", x_train.shape, x_test.shape, y_train.shape, y_test.shape)
+print("Original pixel range:", x_train.min(), x_train.max())
+print("Original first label:", y_train[0])
+
+#removed another foot note, 2
+x_train = x_train.astype('float32') / 255.0 
+x_test = x_test.astype('float32') / 255.0
+
+#removed another footnote 3
+y_train = to_categorical(y_train, NUM_CLASSES)
+y_test = to_categorical(y_test, NUM_CLASSES)
+
+x_train[54, 12, 13, 1]
+# 0.36862746
+
+#ADDED: verify normalization and one-hot encoding
+print("Processed shapes:", x_train.shape, x_test.shape, y_train.shape, y_test.shape)
+print("Normalized pixel range:", x_train.min(), x_train.max())
+print("First one-hot label:", y_train[0])
+print("Pixel at [54,12,13,1]:", x_train[54, 12, 13, 1])
+
+#example 2.1 
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Flatten, Dense, Activation
+
+model = Sequential([
+    Dense(200, activation = 'relu', input_shape=(32, 32, 3)),
+    Flatten(),
+    Dense(150, activation = 'relu'),
+    Dense(10, activation = 'softmax'),
+])
+
+#example 2.2 
+from tensorflow.keras.layers import Input, Flatten, Dense
+from tensorflow.keras.models import Model
+
+input_layer = Input(shape=(32,32, 3))
+
+x = Flatten()(input_layer)
+
+x = Dense(units=200, activation = 'relu')(x)
+x = Dense(units=150, activation = 'relu')(x)
+
+output_layer = Dense(units=10, activation = 'softmax')(x)
+
+model = Model(input_layer, output_layer)
+
+x = Dense(units=200)(x)
+x = Activation('relu')(x)
+
+x = Dense(units=200, activation = 'relu')(x)
+
+#shape of input model matches the shape of output 
+
+#compiling the model 
+from tensorflow.keras.optimizers import Adam
+
+opt = Adam(learning_rate=0.0005)
+model.compile(loss='categorical_crossentropy', optimizer=opt,
+              metrics=['accuracy'])
+
+#training the model 
+model.fit(x_train,
+          y_train,
+          batch_size = 32,
+          epochs = 10,
+          shuffle = True
+          )  
+#evaluating the model 
+model.evaluate(x_test, y_test) 
+
+#viewing predictions on the set 
+CLASSES = np.array(['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog'
+                   , 'frog', 'horse', 'ship', 'truck'])
+
+preds = model.predict(x_test)
+preds_single = CLASSES[np.argmax(preds, axis = -1)]
+actual_single = CLASSES[np.argmax(y_test, axis = -1)] 
+
+# view predictions using the predict method 
+
+CLASSES = np.array(['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog'
+                   , 'frog', 'horse', 'ship', 'truck'])
+
+preds = model.predict(x_test)
+preds_single = CLASSES[np.argmax(preds, axis = -1)]
+actual_single = CLASSES[np.argmax(y_test, axis = -1)] 
+
+# view some of the images along side their labels 
+
+import matplotlib.pyplot as plt
+
+n_to_show = 10
+indices = np.random.choice(range(len(x_test)), n_to_show)
+
+fig = plt.figure(figsize=(15, 3))
+fig.subplots_adjust(hspace=0.4, wspace=0.4)
+
+for i, idx in enumerate(indices):
+    img = x_test[idx]
+    ax = fig.add_subplot(1, n_to_show, i+1)
+    ax.axis('off')
+    ax.text(0.5, -0.35, 'pred = ' + str(preds_single[idx]), fontsize=10
+       , ha='center', transform=ax.transAxes)
+    ax.text(0.5, -0.7, 'act = ' + str(actual_single[idx]), fontsize=10
+        , ha='center', transform=ax.transAxes)
+    ax.imshow(img) 
+
+#using CNNS (convolutional networks)
+from tensorflow.keras.layers import Conv2D, BatchNormalization, LeakyReLU, Dropout
+
+input_layer = Input(shape=(64,64,1))
+
+conv_layer_1 = Conv2D(
+    filters = 2
+    , kernel_size = (3,3)
+    , strides = 1
+    , padding = "same"
+    )(input_layer)  
+
+#using keras for the network
+input_layer = Input(shape=(32,32,3))
+
+conv_layer_1 = Conv2D(
+    filters = 10
+    , kernel_size = (4,4)
+    , strides = 2
+    , padding = 'same'
+    )(input_layer)
+
+conv_layer_2 = Conv2D(
+    filters = 20
+    , kernel_size = (3,3)
+    , strides = 2
+    , padding = 'same'
+    )(conv_layer_1)
+
+flatten_layer = Flatten()(conv_layer_2)
+
+output_layer = Dense(units=10, activation = 'softmax')(flatten_layer)
+
+model = Model(input_layer, output_layer) 
+
+# batch normalization 
+
+# putting it all together 
+input_layer = Input((32,32,3))
+
+x = Conv2D(filters = 32, kernel_size = 3
+	, strides = 1, padding = 'same')(input_layer)
+x = BatchNormalization()(x)
+x = LeakyReLU()(x)
+
+x = Conv2D(filters = 32, kernel_size = 3, strides = 2, padding = 'same')(x)
+x = BatchNormalization()(x)
+x = LeakyReLU()(x)
+
+x = Conv2D(filters = 64, kernel_size = 3, strides = 1, padding = 'same')(x)
+x = BatchNormalization()(x)
+x = LeakyReLU()(x)
+
+x = Conv2D(filters = 64, kernel_size = 3, strides = 2, padding = 'same')(x)
+x = BatchNormalization()(x)
+x = LeakyReLU()(x)
+
+x = Flatten()(x)
+
+x = Dense(128)(x)
+x = BatchNormalization()(x)
+x = LeakyReLU()(x)
+x = Dropout(rate = 0.5)(x)
+
+x = Dense(NUM_CLASSES)(x)
+output_layer = Activation('softmax')(x)
