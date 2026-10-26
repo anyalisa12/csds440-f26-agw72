@@ -141,7 +141,7 @@ vae_decoder_output = layers.Conv2D(
 
 vae_decoder = models.Model(vae_decoder_input, vae_decoder_output, name="vae_decoder")
 
-# 8. Defining the VAE Custom Model Training Loop ---
+# 8. Defining the VAE Custom Model Training Loop 
 class VAE(models.Model):
     def __init__(self, encoder, decoder, **kwargs):
         super(VAE, self).__init__(**kwargs)
@@ -191,7 +191,7 @@ class VAE(models.Model):
 vae = VAE(vae_encoder, vae_decoder)
 vae.compile(optimizer="adam")
 
-# 9. Training VAE on Fashion MNIST Dataset ---
+# 9. Training VAE on Fashion MNIST Dataset 
 vae.fit(
     x_train,
     epochs=5,
