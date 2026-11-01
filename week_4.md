@@ -24,6 +24,7 @@ Answer: Federated Learning for improved prediction of failures in AGVs. It took 
 3. Summarize what you have learned **this week** from the resources above. Be
 clear, detailed and precise. It is ok to be uncertain about the content. Do **not**
 copy/paste content from any resource.
+
 Answer: From my paper "Federated Learning for improved prediction of failures in AGVs", I saw how machine learning models can compare other distributed knowledge and make predictions in a black box scenario. 
 Focus on continuous production optimization because AGVs work/primarily operate in transportation in factories
 I took time to understand the real-time analysis of the AGV data and how ML can enrich local and remote monitoring of the AGVs health and improve consistency of production
@@ -37,6 +38,7 @@ forked another repo or imported pre-built code, please provide a link. If an AI
 tool wrote part of the code, please provide a session transcript in the Week_n
 folder and link to it here. If any part of the code did not run or did not behave
 as expected, describe your best guess why and possible fixes.
+
 Answer: Yes, I debugged my code and wrote a new CNN model to make a federated learning prediction because I might use this specific type of black box preddictions.
 I used CWRU bearing data and cited the work discovered in Jianjig's paper 2 weeks ago;
 
@@ -82,8 +84,10 @@ label_map = {
 7. Summarize any specific points of confusion, uncertainty or difficulty from your
 reading or implementation that arose from your readings or implementations this
 week. This can partly overlap with your answer (3).
+
 Answer: I am still learning how to use batch normalization and the concept of it. This has been covered in class in the Monday lecture and I will read the textbook once more to understand deeper
 
 9. List specific goals you would like to accomplish for next week and action items
 aligned with these goals based on your answers above. Be as specific as you can.
+
 Answer: I will reread the paper and also continue my code because I might end up doing something very similar for my final presentation. Additionally, the data sets in these papers aren't public so I'll contact the professor on advice to get data sets
