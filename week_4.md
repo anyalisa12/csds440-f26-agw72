@@ -41,19 +41,11 @@ Answer: Yes, I debugged my code and wrote a new CNN model to make a federated le
 I used CWRU bearing data and cited the work discovered in Jianjig's paper 2 weeks ago;
 
  
-# CWRU BEARING DATASET + 1D CNN + FEDAVG
-#
+ CWRU BEARING DATASET + 1D CNN + FEDAVG
+ Traditional centralized learning:
 
-#
-# Traditional centralized learning:
-#
-#   Factory A --->|
-#   Factory B --->|----> Central Server
-#   Factory C --->|
-#
 # Problem:
 # Raw proprietary data must be shared.
-#
 
 
 import numpy as np
