@@ -118,8 +118,10 @@ def fedavg(global_model, clients, rounds=10, frac=0.6, epochs=2, batch_size=32, 
 6. Summarize any specific points of confusion, uncertainty or difficulty from your
 reading or implementation that arose from your readings or implementations this
 week. This can partly overlap with your answer (3).
+
 Answer: I was able to get to the averaging step but I still need to understand how individual weights in the training set affect the global weight (prediction) being made by the model. 
 
 7. List specific goals you would like to accomplish for next week and action items
 aligned with these goals based on your answers above. Be as specific as you can.
+
 Answer: For next week, because I have worked on the training, I want to advance to my testing set in my code
