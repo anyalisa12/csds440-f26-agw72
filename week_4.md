@@ -40,14 +40,6 @@ as expected, describe your best guess why and possible fixes.
 Answer: Yes, I debugged my code and wrote a new CNN model to make a federated learning prediction because I might use this specific type of black box preddictions.
 I used CWRU bearing data and cited the work discovered in Jianjig's paper 2 weeks ago;
 
- 
- CWRU BEARING DATASET + 1D CNN + FEDAVG
- Traditional centralized learning:
-
-# Problem:
-# Raw proprietary data must be shared.
-
-
 import numpy as np
 import random
 import requests
@@ -70,39 +62,22 @@ from tensorflow.keras.layers import (
     Flatten,
     BatchNormalization,
     Dropout
-# WINDOW_SIZE = 800
 
 WINDOW_SIZE = 800
-
-# NON-overlapping windows
-#
-# If:
-# WINDOW_SIZE = 800
-# STEP_SIZE   = 800
-#
-# Then:
-#
-# Window 1 = signal[0:800]
-# Window 2 = signal[800:1600]
-# Window 3 = signal[1600:2400]
-#
-# No overlap exists.
-
 STEP_SIZE = 800
-# Paper setup
-
-
 NUM_CLIENTS = 50
 ROUNDS = 20
-# Local training epochs
-#
-# Each client trains locally for a few epochs
-# before sending weights back
 
 LOCAL_EPOCHS = 1
-# Paper uses batch size 16
 BATCH_SIZE = 16
-LEARNING_RATE = 0.01
+LEARNING_RATE = 0.01 
+
+label_map = {
+
+    "normal": 0,
+    "ball": 1,
+    "inner_race": 2,
+    "outer_race": 3
 
 7. Summarize any specific points of confusion, uncertainty or difficulty from your
 reading or implementation that arose from your readings or implementations this
