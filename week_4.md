@@ -87,38 +87,21 @@ WINDOW_SIZE = 800
 # Window 3 = signal[1600:2400]
 #
 # No overlap exists.
-#
-# ------------------------------------------------------------
 
 STEP_SIZE = 800
-
-# ------------------------------------------------------------
 # Paper setup
-# ------------------------------------------------------------
+
 
 NUM_CLIENTS = 50
 ROUNDS = 20
-
-# ------------------------------------------------------------
 # Local training epochs
 #
 # Each client trains locally for a few epochs
 # before sending weights back
-#
-# ------------------------------------------------------------
 
 LOCAL_EPOCHS = 1
-
-# ------------------------------------------------------------
 # Paper uses batch size 16
-# ------------------------------------------------------------
-
 BATCH_SIZE = 16
-
-# ------------------------------------------------------------
-# SGD optimizer learning rate from paper
-# ------------------------------------------------------------
-
 LEARNING_RATE = 0.01
 
 7. Summarize any specific points of confusion, uncertainty or difficulty from your
